@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Likitha Sree Yarabarla | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+:root{--teal:#1E6F5C;--clay:#C1602F;--indigo:#4C5FA8;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#F6F1E8;color:#16211D;font-family:'Work Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+a{color:#1E6F5C;text-decoration:none;}
+a:hover{color:#154F42;}
+img,svg{max-width:100%;display:block;}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;margin:0;}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 32px;}
+.section{padding:100px 0;}
+.section-alt{background:#EFE6D3;}
+.eyebrow{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 18px;}
+.h1{font-weight:600;font-size:clamp(38px,6.4vw,78px);line-height:1.03;letter-spacing:-0.01em;margin:0;color:#16211D;overflow-wrap:break-word;}
+.h2{font-weight:600;font-size:clamp(28px,4.2vw,46px);line-height:1.08;margin:0 0 22px;color:#16211D;overflow-wrap:break-word;}
+.h3{font-weight:600;font-size:21px;margin:0 0 8px;color:#16211D;}
+.lede{font-size:clamp(17px,2vw,20px);line-height:1.6;color:#495148;max-width:640px;margin:0;}
+.body-text{font-size:16px;line-height:1.75;color:#495148;margin:0;}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Work Sans',sans-serif;font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;border:1.6px solid transparent;cursor:pointer;transition:transform .15s ease,background-color .15s ease,color .15s ease;}
+.btn-primary{background:var(--teal);color:#FFFDF8;}
+.btn-primary:hover{background:#123B31;transform:translateY(-2px);color:#FFFDF8;}
+.btn-ghost{background:transparent;border-color:#16211D;color:#16211D;}
+.btn-ghost:hover{background:#16211D;color:#F6F1E8;transform:translateY(-2px);}
+.btn-text{background:transparent;color:var(--teal);padding:14px 4px;font-weight:600;border:none;font-size:15px;font-family:'Work Sans',sans-serif;cursor:pointer;}
+.btn-text:hover{color:var(--clay);}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+.footer .btn-ghost{border-color:#F6F1E8;color:#F6F1E8;}
+.footer .btn-ghost:hover{background:#F6F1E8;color:#16211D;}
+.pill{font-family:'Space Mono',monospace;font-size:12.5px;padding:9px 18px;border-radius:999px;border:1.6px solid #16211D;background:transparent;color:#16211D;cursor:pointer;transition:background-color .15s ease,color .15s ease;}
+.pill.is-active{background:#16211D;color:#F6F1E8;}
+.tag{display:inline-block;font-family:'Space Mono',monospace;font-size:11.5px;padding:6px 12px;border-radius:7px;background:#F6F1E8;color:#495148;border:1px solid #DDD1B8;margin:0 6px 6px 0;}
+.card{background:#FFFDF8;border:1px solid #E4D9C1;border-radius:22px;padding:34px;position:relative;overflow:hidden;transition:transform .2s ease, box-shadow .2s ease;}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(22,33,29,0.1);}
+.stat{background:#FFFDF8;border:1px solid #E4D9C1;border-radius:18px;padding:26px 24px;}
+.stat-num{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(26px,3vw,36px);color:var(--teal);display:block;}
+.stat-num-clay{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(26px,3vw,36px);color:var(--clay);display:block;}
+.stat-label{font-size:14px;color:#495148;margin-top:8px;line-height:1.45;}
+.stat-clay-tint{background:rgba(193,96,47,0.06);}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.grid-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.grid-quick{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.grid-projects{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;align-items:stretch;}
+@media (max-width:860px){
+.grid-2,.grid-stats,.grid-quick,.grid-projects{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:620px){
+.container{padding:0 20px;}
+.section{padding:70px 0;}
+.grid-2,.grid-stats,.grid-quick,.grid-projects{grid-template-columns:1fr;}
+}
+.icon{width:48px;height:48px;border-radius:13px;background:#F6F1E8;color:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.icon svg{width:26px;height:26px;}
+.nav{position:sticky;top:0;z-index:30;background:rgba(246,241,232,.92);backdrop-filter:blur(8px) saturate(140%);border-bottom:1px solid #E4D9C1;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0;flex-wrap:wrap;gap:10px;}
+.nav-logo{font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:#16211D;}
+.nav-links{display:flex;gap:26px;flex-wrap:wrap;}
+.nav-link{font-weight:600;font-size:14px;color:#16211D;}
+.nav-link:hover{color:var(--teal);}
+.badge{display:inline-flex;align-items:center;gap:9px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.03em;padding:8px 16px;border-radius:999px;background:#FFFDF8;border:1.5px dashed var(--clay);color:#495148;}
+.badge-dot{width:7px;height:7px;border-radius:999px;background:var(--clay);flex-shrink:0;}
+.hero{padding:70px 0 56px;}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;} .hero-art{order:-1;max-width:420px;margin:0 auto;}}
+.timeline-item{display:grid;grid-template-columns:190px 1fr;gap:28px;padding:30px 0;border-top:1px solid #DDD1B8;}
+.timeline-item:first-child{border-top:none;}
+@media (max-width:620px){.timeline-item{grid-template-columns:1fr;gap:8px;}}
+.timeline-date{font-family:'Space Mono',monospace;font-size:12.5px;color:#495148;line-height:1.5;}
+.timeline-role{font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin:0 0 4px;}
+.timeline-org{font-size:14.5px;font-weight:600;color:var(--teal);margin:0 0 10px;}
+.ratio-bar{height:14px;border-radius:999px;background:#DDD1B8;overflow:hidden;max-width:420px;}
+.ratio-fill{height:100%;background:var(--teal);border-radius:999px;}
+.legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px;font-size:13.5px;color:#495148;}
+.legend-dot-teal,.legend-dot-line{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;vertical-align:middle;}
+.legend-dot-teal{background:var(--teal);}
+.legend-dot-line{background:#DDD1B8;}
+.venn{width:100%;max-width:520px;margin:0 auto;}
+.footer{background:#16211D;color:#F6F1E8;padding:88px 0 44px;}
+.footer .h2{color:#F6F1E8;}
+.footer .lede{color:#C9C1AE;}
+.footer-fine{color:#8B8778;font-size:13px;margin-top:60px;padding-top:26px;border-top:1px solid #2A362F;}
+.project-card{display:flex;flex-direction:column;gap:16px;height:100%;}
+.project-tags{display:flex;flex-wrap:wrap;gap:0;}
+.quick-fact{display:flex;gap:14px;align-items:flex-start;}
+.badge-text{background:transparent;}
+.stitch{height:2px;background-image:repeating-linear-gradient(90deg, rgba(22,33,29,0.45) 0 10px, transparent 10px 20px);margin-bottom:44px;}
+.bg-numeral{position:absolute;top:-26px;right:-6px;font-family:'Fraunces',serif;font-weight:600;font-size:200px;line-height:1;color:rgba(30,111,92,0.08);z-index:0;pointer-events:none;}
+.card-inner{position:relative;z-index:1;}
+.quote-mark{font-family:'Fraunces',serif;font-weight:600;font-size:120px;line-height:0.5;color:rgba(193,96,47,0.22);margin:0 0 4px;}
+.cat-chip{display:inline-block;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;color:#FFFDF8;margin:0 6px 6px 0;}
+.cat-climate{background:var(--teal);}
+.cat-fashion{background:var(--clay);}
+.cat-ai{background:var(--indigo);}
+.filter-pill[data-filter="climate"].is-active{background:var(--teal);border-color:var(--teal);color:#FFFDF8;}
+.filter-pill[data-filter="fashion"].is-active{background:var(--clay);border-color:var(--clay);color:#FFFDF8;}
+.filter-pill[data-filter="ai"].is-active{background:var(--indigo);border-color:var(--indigo);color:#FFFDF8;}
+#impact .eyebrow{color:var(--clay);}
+#projects .eyebrow{color:var(--indigo);}
+#intersection .eyebrow{color:var(--clay);}
+#climate-week .eyebrow{color:var(--indigo);}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+.reveal-group>*{opacity:0;transform:translateY(18px);transition:opacity .5s ease, transform .5s ease;}
+.reveal-group.is-visible>*{opacity:1;transform:translateY(0);}
+.reveal-group.is-visible>*:nth-child(2){transition-delay:.06s;}
+.reveal-group.is-visible>*:nth-child(3){transition-delay:.12s;}
+.reveal-group.is-visible>*:nth-child(4){transition-delay:.18s;}
+.reveal-group.is-visible>*:nth-child(5){transition-delay:.24s;}
+.reveal-group.is-visible>*:nth-child(6){transition-delay:.3s;}
+@keyframes floatY{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.float-slow{animation:floatY 6s ease-in-out infinite;}
+@keyframes pulseOpacity{0%,100%{opacity:.1;}50%{opacity:.2;}}
+.pulse-halo{animation:pulseOpacity 5s ease-in-out infinite;}
+</style>
+</head>
+<body>
+<div style="width:100%;">
+
+<nav class="nav">
+<div class="container nav-inner">
+<a class="nav-logo" href="#top">Likitha Sree</a>
+<div class="nav-links">
+<a class="nav-link" href="#about">About</a>
+<a class="nav-link" href="#projects">Work</a>
+<a class="nav-link" href="#impact">Impact</a>
+<a class="nav-link" href="#experience">Experience</a>
+<a class="nav-link" href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<header id="top" class="hero">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Data &amp; AI Analyst &middot; Climate Tech &middot; Fashion Tech</div>
+<h1 class="h1">Likitha Sree<br>Yarabarla</h1>
+<p class="lede" style="margin-top:22px;">I turn messy climate, health, and closet data into dashboards, agents, and computer-vision tools that people actually use.</p>
+<p class="body-text" style="margin-top:14px;">Business Intelligence Analyst, Climate &amp; ESG at Worldview Development USA &middot; NYC Metro &middot; Remote</p>
+<div class="btn-row" style="margin-top:30px;">
+<a class="btn btn-primary" href="https://github.com/likitha-sree-data" target="_blank" rel="noopener noreferrer">View GitHub</a>
+<a class="btn btn-ghost" href="https://www.linkedin.com/in/likitha-sree" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+<a class="btn btn-text" href="mailto:likithasree8999@gmail.com">likithasree8999@gmail.com</a>
+</div>
+<div class="badge" style="margin-top:28px;transform:rotate(-1.5deg);"><span class="badge-dot"></span>At Climate Week NYC &middot; September 2026</div>
+</div>
+<div class="hero-art" aria-hidden="true">
+<svg viewBox="0 0 620 480" width="100%" height="auto">
+<circle cx="470" cy="150" r="230" fill="none" stroke="#1E6F5C" stroke-width="1" opacity="0.12" class="pulse-halo"></circle>
+<circle cx="480" cy="95" r="42" fill="none" stroke="#1E6F5C" stroke-width="2.5"></circle>
+<ellipse cx="480" cy="95" rx="140" ry="50" fill="none" stroke="#C1602F" stroke-width="1.4" stroke-dasharray="3 8"></ellipse>
+<g transform="translate(348,78) rotate(-20)">
+<g class="float-slow">
+<rect x="-13" y="-6" width="26" height="12" rx="2" fill="none" stroke="#16211D" stroke-width="2"></rect>
+<line x1="-13" y1="0" x2="-28" y2="0" stroke="#16211D" stroke-width="2"></line>
+<line x1="13" y1="0" x2="28" y2="0" stroke="#16211D" stroke-width="2"></line>
+<line x1="-28" y1="-6" x2="-28" y2="6" stroke="#16211D" stroke-width="2"></line>
+<line x1="28" y1="-6" x2="28" y2="6" stroke="#16211D" stroke-width="2"></line>
+<path d="M18 -14C26 -20 34 -22 40 -20" fill="none" stroke="#C1602F" stroke-width="1.3" stroke-dasharray="1 5" stroke-linecap="round"></path>
+<path d="M20 -6C30 -10 40 -10 46 -6" fill="none" stroke="#C1602F" stroke-width="1.3" stroke-dasharray="1 5" stroke-linecap="round"></path>
+</g>
+</g>
+<circle cx="70" cy="60" r="2.6" fill="#C1602F"></circle>
+<circle cx="140" cy="110" r="1.8" fill="#1E6F5C"></circle>
+<circle cx="230" cy="55" r="2" fill="#1E6F5C"></circle>
+<circle cx="300" cy="130" r="2.4" fill="#C1602F"></circle>
+<circle cx="40" cy="150" r="1.6" fill="#1E6F5C"></circle>
+<path d="M0 330 Q35 315 70 330 T140 330 T210 330 T280 330 T350 330 T420 330 T490 330 T560 330 T620 330" fill="none" stroke="#1E6F5C" stroke-width="2.4"></path>
+<path d="M0 358 Q35 344 70 358 T140 358 T210 358 T280 358 T350 358 T420 358 T490 358 T560 358 T620 358" fill="none" stroke="#1E6F5C" stroke-width="1.4" opacity="0.55"></path>
+<g transform="translate(110,0)">
+<line x1="0" y1="325" x2="0" y2="345" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></line>
+<path d="M0 345 C -18 372 -30 390 -46 428" fill="none" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></path>
+<path d="M0 345 C 4 375 4 400 0 438" fill="none" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></path>
+<path d="M0 345 C 20 372 34 392 50 428" fill="none" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></path>
+</g>
+<g transform="translate(300,0)">
+<line x1="0" y1="325" x2="0" y2="345" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></line>
+<path d="M0 345 C -18 372 -30 390 -46 428" fill="none" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></path>
+<path d="M0 345 C 4 375 4 400 0 438" fill="none" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></path>
+<path d="M0 345 C 20 372 34 392 50 428" fill="none" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></path>
+</g>
+<g transform="translate(480,0)">
+<line x1="0" y1="325" x2="0" y2="345" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></line>
+<path d="M0 345 C -18 372 -30 390 -46 428" fill="none" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></path>
+<path d="M0 345 C 4 375 4 400 0 438" fill="none" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></path>
+<path d="M0 345 C 20 372 34 392 50 428" fill="none" stroke="#C1602F" stroke-width="2.4" stroke-linecap="round"></path>
+</g>
+<g transform="translate(175,405) rotate(-8)">
+<path d="M0 0C5-5 15-5 21 0C15 5 5 5 0 0Z" fill="none" stroke="#1E6F5C" stroke-width="1.4"></path>
+<path d="M21 0l7-5v10Z" fill="none" stroke="#1E6F5C" stroke-width="1.4"></path>
+</g>
+<g transform="translate(415,415) rotate(6)">
+<path d="M0 0C4-4 12-4 17 0C12 4 4 4 0 0Z" fill="none" stroke="#1E6F5C" stroke-width="1.3"></path>
+<path d="M17 0l6-4v8Z" fill="none" stroke="#1E6F5C" stroke-width="1.3"></path>
+</g>
+<path d="M20 30 C 120 60 180 160 130 230 C 90 280 90 300 110 325" fill="none" stroke="#C1602F" stroke-width="1.3" stroke-dasharray="2 8" stroke-linecap="round" opacity="0.55"></path>
+<circle cx="90" cy="220" r="1.8" fill="#1E6F5C"></circle>
+<circle cx="180" cy="250" r="1.4" fill="#C1602F"></circle>
+<circle cx="60" cy="280" r="2" fill="#1E6F5C"></circle>
+<g transform="translate(250,220)">
+<path d="M0 -17 L0 -52" stroke="#C1602F" stroke-width="1.3" stroke-dasharray="1 4" stroke-linecap="round" fill="none"></path>
+<rect x="-18" y="-24" width="36" height="48" rx="7" fill="none" stroke="#16211D" stroke-width="1.8"></rect>
+<circle cx="0" cy="-14" r="3.2" fill="none" stroke="#16211D" stroke-width="1.6"></circle>
+<path d="M-9 12C-9 2 -1 -6 9 -6C9 4 1 12 -9 12Z" fill="none" stroke="#1E6F5C" stroke-width="1.3"></path>
+<path d="M-7 10C-2 4 3 -1 8 -5" fill="none" stroke="#1E6F5C" stroke-width="1"></path>
+</g>
+<g transform="translate(560,300) rotate(15)">
+<path d="M0 0c14-4 24-16 24-30c-14 4-24 16-24 30Z" fill="none" stroke="#1E6F5C" stroke-width="1.6" stroke-linejoin="round"></path>
+<path d="M2 -2c8-6 14-14 18-24" fill="none" stroke="#1E6F5C" stroke-width="1.2"></path>
+</g>
+</svg>
+</div>
+</div>
+</header>
+
+<section id="about" class="section">
+<div class="container">
+<div class="stitch"></div>
+<div class="eyebrow">About</div>
+<h2 class="h2">From Hyderabad, to Ohio, to the coastlines in the data.</h2>
+<p class="lede">I'm a data and AI analyst with four-plus years turning large, messy datasets into decisions across climate, healthcare, and public service.</p>
+<p class="body-text" style="margin-top:18px;max-width:720px;">I design BI dashboards and KPI frameworks in Power BI, Tableau, and Looker, automate ETL and ELT pipelines in Python, SQL, Snowflake, and dbt, and build machine learning and generative AI systems, from GenAI-powered NLP for text clustering to computer vision for image classification. Lately I've been just as interested in what happens after the dashboard ships: whether an agent's recommendation actually holds up, and whether a sustainability claim actually has a number behind it.</p>
+
+<div class="grid-quick reveal-group" style="margin-top:48px;">
+<div class="quick-fact">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"></circle><path d="M24 24V14"></path><path d="M24 24l7 4"></path></svg></div>
+<div><div class="h3" style="font-size:18px;">4+ years</div><div class="body-text">Climate, health &amp; public sector analytics</div></div>
+</div>
+<div class="quick-fact">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6c8 0 14 6.2 14 14c0 10.5-14 22-14 22S10 30.5 10 20C10 12.2 16 6 24 6Z"></path><circle cx="24" cy="20" r="4.2"></circle></svg></div>
+<div><div class="h3" style="font-size:18px;">Hyderabad &rarr; Kent State &rarr; NYC</div><div class="body-text">M.S. Business Analytics, Kent State University</div></div>
+</div>
+<div class="quick-fact">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6c6 4 9 11 9 19c0 5-2 9-4 12h-10c-2-3-4-7-4-12c0-8 3-15 9-19Z"></path><circle cx="24" cy="19" r="3.4"></circle><path d="M15 30l-5 9 9-4"></path><path d="M33 30l5 9-9-4"></path></svg></div>
+<div><div class="h3" style="font-size:18px;">AWS Trainium Frontier</div><div class="body-text">Training a language model from scratch, solo</div></div>
+</div>
+<div class="quick-fact">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="11" r="4"></circle><circle cx="11" cy="35" r="4"></circle><circle cx="37" cy="35" r="4"></circle><path d="M24 15L13 32"></path><path d="M24 15L35 32"></path><path d="M15 35H33"></path></svg></div>
+<div><div class="h3" style="font-size:18px;">Anthropic Academy</div><div class="body-text">Platform, API, MCP, Code, Agent Skills &amp; Subagents</div></div>
+</div>
+</div>
+
+<div style="margin-top:64px;">
+<h3 class="h3">Toolkit</h3>
+<div style="margin-top:14px;">
+<span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">Generative AI</span><span class="tag">NLP</span><span class="tag">Agentic AI</span><span class="tag">Computer Vision</span>
+</div>
+<div style="margin-top:2px;">
+<span class="tag">Snowflake</span><span class="tag">dbt</span><span class="tag">Apache Airflow</span><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span>
+</div>
+<div style="margin-top:2px;">
+<span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Looker</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="impact" class="section section-alt">
+<div class="container">
+<div class="stitch"></div>
+<div class="eyebrow">Impact</div>
+<h2 class="h2">The numbers behind the dashboards</h2>
+<div class="grid-stats reveal-group">
+<div class="stat"><span class="stat-num" data-count-target="21.5" data-count-decimals="1" data-count-suffix="M">21.5M</span><div class="stat-label">tonnes CO2e tracked across restoration programs</div></div>
+<div class="stat"><span class="stat-num" data-count-target="140" data-count-suffix="K+">140K+</span><div class="stat-label">community members reflected in program reporting</div></div>
+<div class="stat"><span class="stat-num" data-count-target="2" data-count-prefix="$" data-count-suffix="M+">$2M+</span><div class="stat-label">in grant budgets automated for variance reporting</div></div>
+<div class="stat"><span class="stat-num" data-count-target="480" data-count-suffix=" hrs">480 hrs</span><div class="stat-label">of manual work eliminated every year ($38K saved)</div></div>
+<div class="stat"><span class="stat-num" data-count-target="40" data-count-suffix="%">40%</span><div class="stat-label">faster analytical reporting with a GenAI summarization workflow</div></div>
+<div class="stat"><span class="stat-num" data-count-target="30" data-count-suffix="%">30%</span><div class="stat-label">higher model recall on a 70M+ record predictive model</div></div>
+</div>
+
+<div class="card reveal" style="margin-top:56px;">
+<div class="bg-numeral" aria-hidden="true">91</div>
+<div class="card-inner">
+<h3 class="h3">What the blue carbon data actually shows</h3>
+<p class="body-text">Mangroves are being lost at roughly a hectare every 15 minutes. The market meant to fund their protection has not kept pace.</p>
+<div class="grid-2" style="margin-top:24px;">
+<div class="stat stat-clay-tint"><span class="stat-num-clay">0</span><div class="stat-label">mangrove carbon credits issued in 2024</div></div>
+<div class="stat stat-clay-tint"><span class="stat-num-clay">0</span><div class="stat-label">mangrove carbon credits issued in 2025</div></div>
+</div>
+<div style="margin-top:28px;">
+<div class="body-text" style="margin-bottom:10px;">Of the 91 mangrove and coastal projects ever listed on the world's largest carbon registry, only 8 have ever issued a credit.</div>
+<div class="ratio-bar"><div class="ratio-fill" style="width:8.8%"></div></div>
+<div class="legend">
+<span><span class="legend-dot-teal"></span>8 projects have issued credits</span>
+<span><span class="legend-dot-line"></span>83 never have</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<div class="container">
+<div class="stitch"></div>
+<div class="eyebrow">Selected Work</div>
+<h2 class="h2">Where climate, fashion, and AI meet</h2>
+<p class="lede">Filter by what you're curious about.</p>
+
+<div class="btn-row" style="margin-top:26px;margin-bottom:36px;">
+<button type="button" class="pill filter-pill is-active" data-filter="all" onclick="setFilter('all')">All Work</button>
+<button type="button" class="pill filter-pill" data-filter="climate" onclick="setFilter('climate')">Climate &amp; Data</button>
+<button type="button" class="pill filter-pill" data-filter="fashion" onclick="setFilter('fashion')">Fashion Tech</button>
+<button type="button" class="pill filter-pill" data-filter="ai" onclick="setFilter('ai')">AI &amp; Agents</button>
+</div>
+
+<div class="grid-projects reveal-group">
+
+<div class="card project-card" data-tags="climate">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M24 6V20"></path><path d="M24 20C18 24 15 28 13 36"></path><path d="M24 20C30 24 33 28 35 36"></path><path d="M24 20C21 26 20 30 20 38"></path><path d="M24 20C27 26 28 30 28 38"></path></svg></div>
+<div><span class="cat-chip cat-climate">Climate</span></div>
+<h3 class="h3">Mangrove Monitor</h3>
+<p class="body-text">A public dashboard tracking global mangrove forest loss, rebuilt on free, no-card infrastructure so it keeps running without a budget behind it.</p>
+<div class="project-tags"><span class="tag">Python</span><span class="tag">DuckDB</span><span class="tag">dbt</span><span class="tag">Streamlit</span></div>
+<a class="btn-text" href="https://github.com/likitha-sree-data/mangrove-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+</div>
+
+<div class="card project-card" data-tags="fashion ai">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 10a4 4 0 1 1 4 4"></path><path d="M24 14v4"></path><path d="M8 34L24 18L40 34"></path><path d="M8 34H40"></path></svg></div>
+<div><span class="cat-chip cat-fashion">Fashion</span><span class="cat-chip cat-ai">AI</span></div>
+<h3 class="h3">Closet First Stylist</h3>
+<p class="body-text">A computer-vision app that reads a photo of your closet and builds outfits from what you already own, so dressing sustainably beats buying new.</p>
+<div class="project-tags"><span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">Streamlit</span><span class="tag">Hugging Face</span></div>
+<a class="btn-text" href="https://huggingface.co/spaces/lilithasree/wardrobe-stylist" target="_blank" rel="noopener noreferrer">Try it live</a>
+</div>
+
+<div class="card project-card" data-tags="climate ai">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="7" width="21" height="27" rx="2"></rect><path d="M14 15H25"></path><path d="M14 21H21"></path><circle cx="30" cy="30" r="7"></circle><path d="M35 35L41 41"></path></svg></div>
+<div><span class="cat-chip cat-climate">Climate</span><span class="cat-chip cat-ai">AI</span></div>
+<h3 class="h3">ScopeCheck</h3>
+<p class="body-text">An AI agent that reads corporate sustainability reports and flags emissions claims with no baseline, no defined scope, or no real numbers, citing the exact sentence behind every flag.</p>
+<div class="project-tags"><span class="tag">Claude API</span><span class="tag">Python</span></div>
+<span class="tag badge-text">Built for the AI Builders Hackathon, 2026</span>
+</div>
+
+<div class="card project-card" data-tags="ai">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6L38 12V22C38 32 32 39 24 42C16 39 10 32 10 22V12Z"></path><path d="M13 24H19L22 18L27 30L30 24H35"></path></svg></div>
+<div><span class="cat-chip cat-ai">AI</span></div>
+<h3 class="h3">SentinelOps</h3>
+<p class="body-text">An autonomous AI agent for data-incident response. Twelve incident scenarios, built and tested end to end, catching pipeline failures and unreliable agent behavior before they become outages.</p>
+<div class="project-tags"><span class="tag">Gemini</span><span class="tag">BigQuery</span><span class="tag">Google ADK</span></div>
+<a class="btn-text" href="https://github.com/likitha-sree-data/sentinelops" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+</div>
+
+<div class="card project-card" data-tags="climate">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="20" width="12" height="10" rx="1.5"></rect><path d="M18 25H8"></path><path d="M30 25H40"></path><path d="M8 20V30"></path><path d="M40 20V30"></path><path d="M24 20V12"></path><circle cx="24" cy="9" r="2.4"></circle></svg></div>
+<div><span class="cat-chip cat-climate">Climate</span></div>
+<h3 class="h3">Methane Over America</h3>
+<p class="body-text">An open-source pipeline turning 300K+ free ESA satellite observations into a browser-ready map of U.S. methane sources, built for zero dollars of infrastructure.</p>
+<div class="project-tags"><span class="tag">Python</span><span class="tag">Snowflake</span><span class="tag">dbt</span><span class="tag">Plotly</span></div>
+<span class="tag badge-text">Independent research &amp; published write-up</span>
+</div>
+
+<div class="card project-card" data-tags="climate">
+<div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M8 40H40"></path><rect x="12" y="28" width="6" height="12"></rect><rect x="22" y="20" width="6" height="20"></rect><rect x="32" y="32" width="6" height="8"></rect><path d="M34 14c4 1 6 5 4 9c-4-1-6-5-4-9Z"></path></svg></div>
+<div><span class="cat-chip cat-climate">Climate</span></div>
+<h3 class="h3">Is the Blue Carbon Market Working?</h3>
+<p class="body-text">Merged NASA fire data, World Bank deforestation trends, and every credit ever issued on the Verra registry. Found that 83 of 91 projects have never issued a credit, and one project alone accounts for 81% of global supply.</p>
+<div class="project-tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Verra + NASA data</span></div>
+<div class="btn-row" style="gap:18px;">
+<a class="btn-text" href="https://thequantasticjournal.com/the-blue-carbon-market-promised-to-save-the-worlds-coastlines-the-data-tells-a-different-story-6b4f4ec774bd" target="_blank" rel="noopener noreferrer">Read the analysis</a>
+<a class="btn-text" href="https://likitha-blue-carbon.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard</a>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top:48px;">
+<h3 class="h3" style="font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:#495148;">Also shipped</h3>
+<div style="margin-top:12px;">
+<span class="tag">Healthcare ETL &amp; Governance</span>
+<span class="tag">Viral Marketing Predictor</span>
+<span class="tag">Graph-Based Connection Recommender</span>
+<span class="tag">Predictive Healthcare Risk Models</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="experience" class="section section-alt">
+<div class="container">
+<div class="stitch"></div>
+<div class="eyebrow">Experience</div>
+<h2 class="h2">Where I've put this to work</h2>
+<div class="timeline reveal-group">
+<div class="timeline-item">
+<div class="timeline-date">Jul 2025 &middot; Present<br>NYC Metro &middot; Remote</div>
+<div>
+<div class="timeline-role">Business Intelligence Analyst, Climate &amp; ESG</div>
+<div class="timeline-org">Worldview Development USA</div>
+<p class="body-text">Design executive dashboards and KPI frameworks across climate, restoration, and grant programs, and automated $2M+ in grant budget variance reporting for C-suite and board-level decisions.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">Mar 2025 &middot; Jul 2025<br>Los Angeles &middot; Remote</div>
+<div>
+<div class="timeline-role">Data Analyst</div>
+<div class="timeline-org">211 LA, County of Los Angeles</div>
+<p class="body-text">Built automated SQL-to-Redshift pipelines and GenAI-powered text clustering for disaster response reporting, eliminating 480 hours of manual work a year and cutting reporting time 40%.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">Sep 2023 &middot; Dec 2024<br>Kent, Ohio</div>
+<div>
+<div class="timeline-role">Research Assistant, Data Analytics</div>
+<div class="timeline-org">Kent State University</div>
+<p class="body-text">Built classification and regression models on 70M+ behavioral records, improving model recall 30% through feature engineering, hyperparameter tuning, and cross-validation.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">May 2021 &middot; Aug 2023<br>Hyderabad, India</div>
+<div>
+<div class="timeline-role">Analytics Engineer</div>
+<div class="timeline-org">Tesla Diagnostics Center</div>
+<p class="body-text">Built real-time anomaly detection across 1.8TB of patient vital-sign data, preventing 470+ critical device escalations across 14 clinics under HIPAA-compliant governance.</p>
+</div>
+</div>
+</div>
+
+<div style="margin-top:56px;">
+<h3 class="h3">Education &amp; Credentials</h3>
+<div style="margin-top:10px;">
+<span class="tag">M.S. Business Analytics, Kent State (3.75 GPA)</span>
+<span class="tag">B.Tech, Malla Reddy University</span>
+<span class="tag">AWS Trainium Frontier</span>
+<span class="tag">Anthropic Academy Certified</span>
+<span class="tag">Tableau Desktop Specialist</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="intersection" class="section">
+<div class="container">
+<div class="stitch"></div>
+<div class="eyebrow">Why Climate + Fashion + AI</div>
+<h2 class="h2" style="max-width:760px;">Three fields, one habit: follow the data until the story holds up.</h2>
+<div class="quote-mark" aria-hidden="true">&ldquo;</div>
+<p class="lede">Fast fashion and unclear climate claims share the same failure: nobody checks the receipts.</p>
+<p class="body-text" style="margin-top:16px;max-width:740px;">I spend my days building the receipts. Closet First Stylist uses computer vision so people reach for clothes they already own instead of buying new. ScopeCheck uses an AI agent to catch sustainability claims that don't cite a real number. Mangrove Monitor and the methane tracker turn satellite data into something a policy analyst can actually read. Different fields, same habit: follow the data until the story holds up, or admit that it doesn't.</p>
+
+<div class="venn reveal" style="margin-top:56px;" aria-hidden="true">
+<svg viewBox="0 0 520 420" width="100%" height="auto">
+<circle cx="195" cy="165" r="115" fill="none" stroke="#1E6F5C" stroke-width="2.2"></circle>
+<circle cx="325" cy="165" r="115" fill="none" stroke="#C1602F" stroke-width="2.2"></circle>
+<circle cx="260" cy="255" r="115" fill="none" stroke="#16211D" stroke-width="1.8"></circle>
+<circle cx="130" cy="35" r="4" fill="#1E6F5C"></circle>
+<text x="142" y="40" font-family="Space Mono, monospace" font-size="14" font-weight="700" fill="#16211D">CLIMATE</text>
+<circle cx="392" cy="35" r="4" fill="#C1602F"></circle>
+<text x="404" y="40" font-family="Space Mono, monospace" font-size="14" font-weight="700" fill="#16211D">FASHION</text>
+<circle cx="205" cy="398" r="4" fill="#16211D"></circle>
+<text x="217" y="403" font-family="Space Mono, monospace" font-size="14" font-weight="700" fill="#16211D">AI &amp; AGENTS</text>
+</svg>
+</div>
+</div>
+</section>
+
+<section id="climate-week" class="section section-alt">
+<div class="container">
+<div class="stitch"></div>
+<div class="eyebrow">This Week</div>
+<h2 class="h2" style="max-width:660px;">I'm at Climate Week NYC 2026</h2>
+<p class="lede">I'm part of the Worldview Development USA team helping put together "Reimagining Mangroves and the Blue Economy in Panama," on September 24 at Bryant Park Loft. If you're building at the intersection of climate, data, or fashion, I'd love to connect while I'm in town.</p>
+<div class="btn-row" style="margin-top:26px;">
+<a class="btn btn-primary" href="https://www.linkedin.com/in/likitha-sree" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+<a class="btn btn-ghost" href="mailto:likithasree8999@gmail.com">Email me</a>
+</div>
+</div>
+</section>
+
+<footer id="contact" class="footer">
+<div class="container">
+<h2 class="h2">Let's build something that holds up under scrutiny.</h2>
+<p class="lede">Open to full-time roles and collaborations at the intersection of climate, AI, and fashion tech.</p>
+<div class="btn-row" style="margin-top:30px;">
+<a class="btn btn-primary" href="mailto:likithasree8999@gmail.com">Email me</a>
+<a class="btn btn-ghost" href="https://www.linkedin.com/in/likitha-sree" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="btn btn-ghost" href="https://github.com/likitha-sree-data" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+<div style="margin-top:20px;"><a href="mailto:likithasree8999@gmail.com" style="color:#F6F1E8;font-family:'Space Mono',monospace;font-size:14px;">likithasree8999@gmail.com</a></div>
+<div class="footer-fine">Likitha Sree Yarabarla &middot; Ohio, USA &middot; Authorized to work in the U.S. through 2028</div>
+</div>
+</footer>
+
+</div>
+<script>
+function setFilter(f){
+  document.querySelectorAll('.filter-pill').forEach(function(b){
+    b.classList.toggle('is-active', b.getAttribute('data-filter') === f);
+  });
+  document.querySelectorAll('.project-card').forEach(function(c){
+    var tags = (c.getAttribute('data-tags') || '').split(' ');
+    c.style.display = (f === 'all' || tags.indexOf(f) !== -1) ? '' : 'none';
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var revealTargets = document.querySelectorAll('.reveal, .reveal-group');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealTargets.forEach(function (el) { io.observe(el); });
+  } else {
+    revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  var counters = document.querySelectorAll('[data-count-target]');
+  counters.forEach(function (el) {
+    var target = parseFloat(el.getAttribute('data-count-target'));
+    if (isNaN(target)) return;
+    var prefix = el.getAttribute('data-count-prefix') || '';
+    var suffix = el.getAttribute('data-count-suffix') || '';
+    var decimals = parseInt(el.getAttribute('data-count-decimals') || '0', 10);
+    function animate() {
+      var duration = 1100;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = prefix + (target * eased).toFixed(decimals) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = prefix + target.toFixed(decimals) + suffix;
+      }
+      requestAnimationFrame(step);
+    }
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animate();
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      obs.observe(el);
+    }
+  });
+});
+</script>
+</body>
+</html>
